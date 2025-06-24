@@ -1,30 +1,47 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>RubyRealm</title>
-        <link rel="stylesheet" href="Navbarstyle.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>RubyRealm</title>
+  <link rel="stylesheet" href="Navbarstyle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+</head>
+<body>
 
-         <link rel="stylesheet"
-        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <header>
+  <!-- Left: Logo -->
+  <a href="index.html" class="logo">
+    <img src="RUBY-removebg-preview-removebg-preview (1).png" alt="RubyRealm Logo">
+  </a>
 
-    </head>
-    <body>
-        <header>
-            <a href="index.html" class="logo"><img src="RUBY-removebg-preview-removebg-preview (1).png"></a>
+  <!-- Dropdown Menu -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Store.html">Store</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
 
-            <ul class="Nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Store.html">Store</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-            <div class="Navbar-Right">
-            <a href="#"><button class="btn">Log In</button></a>
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </div>
-        </header>
+    <!-- Right: Menu icon and Login -->
+  <div class="header-right">
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <a href="#"><button class="btn">Log In</button></a>
+  </div>
+</header>
 
-    </body>
+  <!-- Script to toggle menu -->
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('navLinks');
+    const navRight = document.getElementById('navRight');
+
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      navRight.classList.toggle('active');
+    });
+  </script>
+
+</body>
 </html>
