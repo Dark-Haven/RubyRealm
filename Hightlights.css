@@ -1,0 +1,29 @@
+/* === Highlights Section === */
+.highlights {
+  text-align: center;
+  padding: 60px 5%;
+  background: #fff9f9;
+}
+
+.highlights h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #b80011;
+}
+
+.highlight-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #ffe5e5;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 18px;
+  color: #4e0105;
+  font-weight: 500;
+}

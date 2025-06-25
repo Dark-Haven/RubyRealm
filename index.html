@@ -31,5 +31,111 @@
   </div>
 </header>
 
+
+<!--  This is Carosuel Section  -->
+ <link rel="stylesheet" href="Carosuel.css" />
+<main class="home-content">
+  <section class="carousel-section">
+    <div class="carousel">
+      <div class="carousel-slides">
+        <div class="slide active">
+          <div class="slide-content">
+            <img src="Beige Brown Summer Mid Sale Promotion Banner.png" alt="Summer Sale">
+          </div>
+        </div>
+        <!-- Add more slides the same way -->
+        </div>
+
+      <!-- Navigation Buttons -->
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+
+      <!-- Dot Indicators -->
+      <div class="carousel-dots"></div>
+    </div>
+  </section>
+</main>
+
+<!-- This is Highlights Section -->
+<link rel="stylesheet" href="Highlights.css" />
+ <section class="highlights">
+    <h2>Why Shop With RubyRealm?</h2>
+    <div class="highlight-cards">
+      <div class="card">✨ Handpicked Products</div>
+      <div class="card">🚚 Fast, Free Shipping</div>
+      <div class="card">🎁 Exclusive Offers</div>
+    </div>
+  </section>
+
+
+<!-- Script/ JS -->
+<script>
+  const menuIcon = document.getElementById("menu-icon");
+  const navLinks = document.getElementById("navLinks");
+
+  menuIcon.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dotsContainer = document.querySelector('.carousel-dots');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+
+  let currentIndex = 0;
+  let interval = null;
+
+  // Create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+  const dots = dotsContainer.querySelectorAll('button');
+
+  function updateCarousel() {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === currentIndex);
+    });
+
+    const offset = -currentIndex * 100;
+    document.querySelector('.carousel-slides').style.transform = `translateX(${offset}%)`;
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+  }
+
+  function goToSlide(index) {
+    currentIndex = (index + slides.length) % slides.length;
+    updateCarousel();
+  }
+
+  function nextSlide() {
+    goToSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    goToSlide(currentIndex - 1);
+  }
+
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+
+  function startAutoSlide() {
+    interval = setInterval(nextSlide, 5000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(interval);
+  }
+
+  document.querySelector('.carousel').addEventListener('mouseover', stopAutoSlide);
+  document.querySelector('.carousel').addEventListener('mouseout', startAutoSlide);
+
+  updateCarousel();
+  startAutoSlide();
+</script>
     </body>
 </html>
