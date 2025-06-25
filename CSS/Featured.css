@@ -1,0 +1,47 @@
+/* === Featured Section === */
+.featured {
+  padding: 60px 5%;
+  background-color: #fda0a875;
+  text-align: center;
+  width: 90%;
+  justify-self: center;
+  border-radius: 20px;
+}
+
+.featured h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #b80011;
+}
+
+.category-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  width: 250px;
+  background-color: #e02e40be;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.category-card h3 {
+  font-size: 20px;
+  padding: 15px 0;
+  color: #4e0105;
+}

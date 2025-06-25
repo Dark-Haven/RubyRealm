@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>RubyRealm</title>
-  <link rel="stylesheet" href="Navbarstyle.css" />
+  <link rel="stylesheet" href="CSS/Navbarstyle.css" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
 </head>
 <body>
@@ -13,7 +13,7 @@
   <header>
   <!-- Left: Logo -->
   <a href="index.html" class="logo">
-    <img src="RUBY-removebg-preview-removebg-preview (1).png" alt="RubyRealm Logo">
+    <img src="Images/RubyRealms.png" alt="RubyRealm Logo">
   </a>
 
   <!-- Dropdown Menu -->
@@ -33,19 +33,22 @@
 
 
 <!--  This is Carosuel Section  -->
- <link rel="stylesheet" href="Carosuel.css" />
+ <link rel="stylesheet" href="CSS/Carosuel.css" />
 <main class="home-content">
   <section class="carousel-section">
     <div class="carousel">
       <div class="carousel-slides">
         <div class="slide active">
           <div class="slide-content">
-            <img src="Beige Brown Summer Mid Sale Promotion Banner.png" alt="Summer Sale">
+            <img src="Images/Summer Sale.png" alt="Summer Sale">
           </div>
         </div>
-        <!-- Add more slides the same way -->
+        <div class="slide">
+          <div class="slide-content">
+            <img src="#" alt="Reply suiiii if u saw this and image rushab has not made yet">
+          </div>
         </div>
-
+        </div>
       <!-- Navigation Buttons -->
       <button class="carousel-btn prev">&#10094;</button>
       <button class="carousel-btn next">&#10095;</button>
@@ -56,86 +59,51 @@
   </section>
 </main>
 
+
+
+
+
 <!-- This is Highlights Section -->
-<link rel="stylesheet" href="Highlights.css" />
+<link rel="stylesheet" href="CSS/Hightlights.css" />
  <section class="highlights">
     <h2>Why Shop With RubyRealm?</h2>
     <div class="highlight-cards">
-      <div class="card">✨ Handpicked Products</div>
+      <div class="card">✨ New and Featured Products</div>
       <div class="card">🚚 Fast, Free Shipping</div>
       <div class="card">🎁 Exclusive Offers</div>
     </div>
   </section>
 
 
-<!-- Script/ JS -->
-<script>
-  const menuIcon = document.getElementById("menu-icon");
-  const navLinks = document.getElementById("navLinks");
 
-  menuIcon.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-</script>
-<script>
-  const slides = document.querySelectorAll('.slide');
-  const dotsContainer = document.querySelector('.carousel-dots');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const nextBtn = document.querySelector('.carousel-btn.next');
 
-  let currentIndex = 0;
-  let interval = null;
 
-  // Create dots
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.addEventListener('click', () => goToSlide(i));
-    dotsContainer.appendChild(dot);
-  });
-  const dots = dotsContainer.querySelectorAll('button');
 
-  function updateCarousel() {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === currentIndex);
-    });
+<!--This is Featured Product section-->
+ <!-- ✅ Featured Categories -->
+<link rel="stylesheet" href="CSS/Featured.css" />
+  <section class="featured">
+    <h2>Explore Categories</h2>
+    <div class="category-grid">
+      <div class="category-card">
+        <h3>Crafts</h3>
+      </div>
+      <div class="category-card">
+        <h3>DIY Kits</h3>
+      </div>
+      <div class="category-card">
+        <h3>Gifts</h3>
+      </div>
+    </div>
+  </section>
 
-    const offset = -currentIndex * 100;
-    document.querySelector('.carousel-slides').style.transform = `translateX(${offset}%)`;
 
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentIndex);
-    });
-  }
+<!-- Footer-->
+ <link rel="stylesheet" href="CSS/Footer.css" />
+<footer class="site-footer" id="footer">
+  <p>&copy; 2025 RubyRealm • <a href="Contact.html">Contact</a></p>
+</footer>
 
-  function goToSlide(index) {
-    currentIndex = (index + slides.length) % slides.length;
-    updateCarousel();
-  }
-
-  function nextSlide() {
-    goToSlide(currentIndex + 1);
-  }
-
-  function prevSlide() {
-    goToSlide(currentIndex - 1);
-  }
-
-  prevBtn.addEventListener('click', prevSlide);
-  nextBtn.addEventListener('click', nextSlide);
-
-  function startAutoSlide() {
-    interval = setInterval(nextSlide, 5000);
-  }
-
-  function stopAutoSlide() {
-    clearInterval(interval);
-  }
-
-  document.querySelector('.carousel').addEventListener('mouseover', stopAutoSlide);
-  document.querySelector('.carousel').addEventListener('mouseout', startAutoSlide);
-
-  updateCarousel();
-  startAutoSlide();
-</script>
+<script src="JS/main.js"></script>
     </body>
 </html>
