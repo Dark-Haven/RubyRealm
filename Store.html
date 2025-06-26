@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RubyRealm | Store</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/Navbarstyle.css">
+  <link rel="stylesheet" href="CSS/StoreMenu.css">
+  <link rel="stylesheet" href="CSS/Cart.css">
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="Images/RubyRealms.png" alt="RubyRealm Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Store.html" class="active">Store</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <div class="header-right">
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <a href="#"><button class="btn">Log In</button></a>
+    </div>
+  </header>
+
+  <h1 class="store-title">Explore Our Products</h1>
+
+  <!-- ✅ Product Section -->
+  <section class="store-section">
+    <div class="store-Category">
+    <button class="collapse-btn">DIY Kits</button>
+    <div class="product-panel">
+      <div class="product-card">
+        <img src="images/canvas.jpg" alt="Canvas Set">
+        <h4 class="product-name">Mini Canvas Set</h4>
+        <p class="product-price">₹499</p>
+        <div class="product-control">
+          <button class="add-cart" data-product="Mini Canvas Set">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/mandala.jpg" alt="Mandala Kit">
+        <h4 class="product-name">Mandala Starter Kit</h4>
+        <p class="product-price">₹899</p>
+        <div class="product-control">
+          <button class="add-cart" data-product="Mandala Kit">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/jewelry.jpg" alt="Jewelry Box">
+        <h4 class="product-name">Jewelry DIY Box</h4>
+        <p class="product-price">₹799</p>
+        <div class="product-control">
+          <button class="add-cart" data-product="Jewelry Box">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="store-Category">
+    <button class="collapse-btn">Accessories</button>
+    <div class="product-panel">
+      <div class="product-card">
+        <img src="images/bracelet.jpg" alt="Bracelet">
+        <h4 class="product-name">Charm Bracelet</h4>
+        <p class="product-price">₹299</p>
+        <div class="product-control">
+          <button class="add-cart" data-product="Bracelet">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/keychain.jpg" alt="Keychain">
+        <h4 class="product-name">Keychain</h4>
+        <p class="product-price">₹149</p>
+        <div class="product-control">
+          <button class="add-cart" data-product="Keychain">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/necklace.jpg" alt="Necklace">
+        <h4 class="product-name">Beaded Necklace</h4>
+        <p class="product-price">₹399</p>
+        <div class="product-control">
+          <button class="add-cart" data-product="Necklace">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+    <!-- Cart icon -->
+<div id="cartSidebarBtn" class="floating-cart">
+  <i class='bx bx-cart'></i>
+  <span id="cart-count">0</span>
+</div>
+
+  <!-- Sidebar -->
+  <div id="cartSidebar" class="cart-sidebar">
+    <button id="closeSidebar" class="close-btn">&times;</button>
+    <h3>Your Cart</h3>
+    <ul id="cartItems"></ul>
+    <div class="cart-total">Total: ₹<span id="cartTotal">0</span></div>
+    <button id="checkoutBtn" class="checkout-btn">Checkout →</button>
+  </div>
+  <div id="cartOverlay" class="cart-overlay"></div>
+
+  <script src="JS/Cart.js" defer></script>
+  <script src="JS/StoreMenu.js" defer></script>
+</body>
+</html>

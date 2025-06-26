@@ -89,11 +89,16 @@ startAutoSlide();
 // ======= 3. Footer Show on Scroll =======
 const footer = document.getElementById('footer');
 
-window.addEventListener('scroll', () => {
-  const scrollThreshold = 550; // Show footer after scrolling 300px
-  if (window.scrollY > scrollThreshold) {
-    footer.classList.add('show');
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const docHeight = document.documentElement.scrollHeight;
+
+  const scrollPercent = (scrollY + windowHeight) / docHeight;
+
+  if (scrollPercent > 0.8) {
+    footer.classList.add("visible");
   } else {
-    footer.classList.remove('show');
+    footer.classList.remove("visible");
   }
 });

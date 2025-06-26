@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RubyRealm | Your Cart</title>
+  <link rel="stylesheet" href="CSS/Navbarstyle.css" />
+  <link rel="stylesheet" href="CSS/Cart.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="Images/RubyRealms.png" alt="Logo" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Store.html" class="active">Store</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <section class="cart-page">
+    <h1>Your Cart</h1>
+    <div id="cartDetail" class="cart-list"></div>
+    <p class="cart-total-summary"><strong>Total: ₹<span id="finalTotal">0</span></strong></p>
+    <button onclick="alert('Thanks for your purchase!')" class="checkout-btn">Place Order</button>
+  </section>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    const cartDetail = document.getElementById('cartDetail');
+    const finalTotal = document.getElementById('finalTotal');
+    let sum = 0;
+
+    Object.values(cart).forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'cart-item';
+      div.innerHTML = `
+        <div class="item-info">
+          <strong>${item.name}</strong>
+          <span>₹${item.price} x ${item.qty}</span>
+        </div>
+        <div><strong>₹${item.price * item.qty}</strong></div>
+      `;
+      cartDetail.appendChild(div);
+      sum += item.price * item.qty;
+    });
+
+    finalTotal.textContent = sum;
+  </script>
+</body>
+</html>

@@ -1,45 +1,42 @@
+/* Hidden by default */
 .site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #4e0105;
+  background-color: #f3131f;
   color: white;
   text-align: center;
-  padding: 12px 10px;
+  padding: 20px 10px;
   font-size: 14px;
-  font-family: 'Poppins', sans-serif;
-  z-index: 999;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 100;
   opacity: 0;
-  transform: translateY(100%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
+  visibility: hidden;
+  transform: translateY(40px);
+    will-change: opacity, transform;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.site-footer.show {
+/* When scrolled past 90% */
+.site-footer.visible {
+  margin-top: 20px;
   opacity: 1;
+  visibility: visible;
   transform: translateY(0);
-  pointer-events: all;
 }
 
+/* Footer link styling */
 .site-footer a {
-  color: #fff4f4;
-  text-decoration: none;
-  font-weight: 500;
+  color: white;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
 .site-footer a:hover {
-  text-decoration: underline;
+  color: #ffeaea;
 }
 
-body {
-  padding-bottom: 60px;
-}
-
-@media (max-width: 480px) {
+/* Responsive */
+@media (min-width: 768px) {
   .site-footer {
-    font-size: 12px;
-    padding: 10px 6px;
+    font-size: 15px;
+    padding: 25px 20px;
   }
 }
