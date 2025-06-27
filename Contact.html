@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RubyRealm | Contact</title>
+  <link rel="stylesheet" href="CSS/Common/Navbarstyle.css" />
+  <link rel="stylesheet" href="CSS/Common/Footer.css" />
+    <link rel="stylesheet" href="CSS/Conatct/Contact.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+  <!-- Left: Logo -->
+  <a href="index.html" class="logo">
+    <img src="Images/Logo-removebg-preview.png" alt="RubyRealm Logo">
+    <div class="logo-text"><p>RubyRealms</p></div>
+  </a>
+
+  <!-- Dropdown Menu -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Store.html">Store</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+
+    <!-- Right: Menu icon and Login -->
+  <div class="header-right">
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <a href="#"><button class="btn">Log In</button></a>
+  </div>
+</header>
+
+  <section class="contact-container">
+    <h1>Contact Us</h1>
+
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="contact-btn">Send Message</button>
+    </form>
+
+<div class="contact-info-container">
+  <div class="info-box">
+    <i class='bx bx-envelope'></i>
+    <h3>Email Us</h3>
+    <p><a href="mailto:support@rubyrealm.in">support@rubyrealm.in</a></p>
+  </div>
+
+  <div class="info-box">
+    <i class='bx bx-phone'></i>
+    <h3>Call Us</h3>
+    <p><a href="tel:+919999999999">+91 99999 99999</a></p>
+    <p><a href="tel:+918888888888">+91 88888 88888</a></p>
+  </div>
+
+  <div class="info-box">
+    <i class='bx bx-store'></i>
+    <h3>Visit Us</h3>
+    <ul>
+      <li><a href="https://goo.gl/maps/EXAMPLE1" target="_blank">Mumbai Store</a></li>
+      <li><a href="https://goo.gl/maps/EXAMPLE2" target="_blank">Bangalore Store</a></li>
+      <li><a href="https://goo.gl/maps/EXAMPLE3" target="_blank">Delhi Store</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <div id="successMessage" class="floating-message">
+      Message sent! (This is a demo)
+    </div>
+  </section>
+
+    <!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>RubyRealm</h2>
+      <p>Crafting unique experiences for modern lifestyles.</p>
+    </div>
+    <div class="footer-center">
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+    <div class="footer-right">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-youtube'></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 RubyRealm. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Boxicons CDN (for icons) -->
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+<!-- Include footer script -->
+<script src="JS/Footer.js"></script>
+
+  <script src="JS/Contact.js"></script>
+</body>
+</html>

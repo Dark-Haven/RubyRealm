@@ -41,7 +41,24 @@
 }
 
 .category-card h3 {
+  text-decoration: none;
   font-size: 20px;
   padding: 15px 0;
-  color: #4e0105;
+  color: #dd1f29;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* or set to a specific color */
+}
+
+/* For specific button-like links */
+a.featured-link {
+  text-decoration: none;
+  color: #000000; /* change to your desired color */
+  font-weight: 100;
+}
+
+a.featured-link:hover {
+  color: #e91e63; /* hover color */
 }

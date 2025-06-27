@@ -4,49 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RubyRealm | Your Cart</title>
-  <link rel="stylesheet" href="CSS/Navbarstyle.css" />
-  <link rel="stylesheet" href="CSS/Cart.css" />
+  <link rel="stylesheet" href="CSS/Store/Cart.css" />
+  <link rel="stylesheet" href="CSS/Common/Navbarstyle.css" />
+    <link rel="stylesheet" href="CSS/Common/Footer.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <a href="index.html" class="logo"><img src="Images/RubyRealms.png" alt="Logo" /></a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="Store.html" class="active">Store</a></li>
-      <li><a href="About.html">About</a></li>
-      <li><a href="Contact.html">Contact</a></li>
-    </ul>
-  </header>
+    <header>
+  <!-- Left: Logo -->
+  <a href="index.html" class="logo">
+    <img src="Images/Logo-removebg-preview.png" alt="RubyRealm Logo">
+    <div class="logo-text"><p>RubyRealms</p></div>
+  </a>
 
-  <section class="cart-page">
+  <!-- Dropdown Menu -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Store.html">Store</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+
+    <!-- Right: Menu icon and Login -->
+  <div class="header-right">
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <a href="#"><button class="btn">Log In</button></a>
+  </div>
+</header>
+
+  <main class="cart-container">
     <h1>Your Cart</h1>
     <div id="cartDetail" class="cart-list"></div>
     <p class="cart-total-summary"><strong>Total: ₹<span id="finalTotal">0</span></strong></p>
-    <button onclick="alert('Thanks for your purchase!')" class="checkout-btn">Place Order</button>
-  </section>
+    <button id="placeOrderBtn" class="checkout-btn">Place Order</button>
 
-  <script>
-    const cart = JSON.parse(localStorage.getItem('cart')) || {};
-    const cartDetail = document.getElementById('cartDetail');
-    const finalTotal = document.getElementById('finalTotal');
-    let sum = 0;
+<!-- Floating Message -->
+<div id="orderPopup" class="order-popup">✅ Order placed!<br>(This is a demo site, no real order is processed.)</div>
 
-    Object.values(cart).forEach(item => {
-      const div = document.createElement('div');
-      div.className = 'cart-item';
-      div.innerHTML = `
-        <div class="item-info">
-          <strong>${item.name}</strong>
-          <span>₹${item.price} x ${item.qty}</span>
-        </div>
-        <div><strong>₹${item.price * item.qty}</strong></div>
-      `;
-      cartDetail.appendChild(div);
-      sum += item.price * item.qty;
-    });
 
-    finalTotal.textContent = sum;
-  </script>
+    <a href="Store.html" class="back-btn">← Back to Shop</a>
+  </main>
+
+    <!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>RubyRealm</h2>
+      <p>Crafting unique experiences for modern lifestyles.</p>
+    </div>
+    <div class="footer-center">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+    <div class="footer-center">
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 RubyRealm. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Boxicons CDN (for icons) -->
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+<!-- Include footer script -->
+<script src="JS/Footer.js"></script>
+
+  <script src="JS/Cart.js"></script>
 </body>
 </html>

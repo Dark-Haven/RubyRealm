@@ -1,0 +1,148 @@
+body {
+  font-family: 'Outfit', sans-serif;
+  background: #e5a2a265;
+  color: #333;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.contact-container h1 {
+  text-align: center;
+  color: #f3131f;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-btn {
+  background: #f3131f;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #c10015;
+}
+
+.floating-message {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  background: #0baf5d;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(30px);
+  transition: all 0.4s ease;
+  z-index: 2000;
+}
+
+.floating-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.contact-info {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.contact-info h2 {
+  color: #f3131f;
+  margin-bottom: 15px;
+}
+
+.contact-info p, .contact-info li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #f3131f;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+.contact-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.info-box {
+  flex: 1;
+  min-width: 260px;
+  background: #fa7171;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  text-align: center;
+}
+
+.info-box i {
+  font-size: 2rem;
+  color: #f3131f;
+  margin-bottom: 10px;
+}
+
+.info-box h3 {
+  color: #222;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.info-box p,
+.info-box a,
+.info-box li {
+  font-size: 1rem;
+  color: #ff7d7d;
+  margin: 6px 0;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.info-box a:hover {
+  color: #f3131f;
+  text-decoration: underline;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

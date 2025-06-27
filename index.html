@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>RubyRealm</title>
-  <link rel="stylesheet" href="CSS/Navbarstyle.css" />
+  <link rel="stylesheet" href="CSS/Common/Navbarstyle.css" />
+  <link rel="stylesheet" href="CSS/Common/Footer.css" />
+
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
 </head>
 <body>
@@ -13,7 +15,8 @@
   <header>
   <!-- Left: Logo -->
   <a href="index.html" class="logo">
-    <img src="Images/RubyRealms.png" alt="RubyRealm Logo">
+    <img src="Images/Logo-removebg-preview.png" alt="RubyRealm Logo">
+    <div class="logo-text"><p>RubyRealms</p></div>
   </a>
 
   <!-- Dropdown Menu -->
@@ -26,13 +29,16 @@
 
     <!-- Right: Menu icon and Login -->
   <div class="header-right">
-    <div class="bx bx-menu" id="menu-icon"></div>
+    <i class="bx bx-menu" id="menu-icon"></i  >
     <a href="#"><button class="btn">Log In</button></a>
   </div>
 </header>
 
 
 <!--  This is Carosuel Section  -->
+ <link rel="stylesheet" href="CSS/Home/Carosuel.css" />
+ <h1 class="carousel-title">Welcome to RubyRealm</h1>
+ <h2 class="carousel-subtitle">Your one-stop shop for all things creative</h2>
  <link rel="stylesheet" href="CSS/Carosuel.css" />
 <main class="home-content">
   <section class="carousel-section">
@@ -40,12 +46,12 @@
       <div class="carousel-slides">
         <div class="slide active">
           <div class="slide-content">
-            <img src="Images/Summer Sale.png" alt="Summer Sale">
+            <img src="Images/Summer Sale.jpg" alt="Summer Sale">
           </div>
         </div>
         <div class="slide">
           <div class="slide-content">
-            <img src="#" alt="Have to add Pics">
+            <img src="Images/Free over 3000.png" alt="Calligraphy Set Free">
           </div>
         </div>
         </div>
@@ -64,7 +70,7 @@
 
 
 <!-- This is Highlights Section -->
-<link rel="stylesheet" href="CSS/Hightlights.css" />
+<link rel="stylesheet" href="CSS/Home/Hightlights.css" />
  <section class="highlights">
     <h2>Why Shop With RubyRealm?</h2>
     <div class="highlight-cards">
@@ -81,28 +87,51 @@
 
 <!--This is Featured Product section-->
  <!-- ✅ Featured Categories -->
-<link rel="stylesheet" href="CSS/Featured.css" />
+<link rel="stylesheet" href="CSS/Home/Featured.css" />
   <section class="featured">
     <h2>Explore Categories</h2>
     <div class="category-grid">
       <div class="category-card">
-        <h3>Crafts</h3>
+        <h3><a href="Store.html#DIY-Kits" class="featured-link">DIY Kits</a></h3>
       </div>
       <div class="category-card">
-        <h3>DIY Kits</h3>
+        <h3><a href="Store.html#Accessories" class="featured-link">Accessories</a></h3>
       </div>
       <div class="category-card">
-        <h3>Gifts</h3>
+        <h3><a href="Store.html#Stationary" class="featured-link">Stationary</a></h3>
       </div>
     </div>
   </section>
 
-
-<!-- Footer-->
- <link rel="stylesheet" href="CSS/Footer.css" />
-<footer class="site-footer" id="footer">
-  <p>&copy; 2025 RubyRealm • <a href="Contact.html">Contact</a></p>
+  
+  <!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>RubyRealm</h2>
+      <p>Crafting unique experiences for modern lifestyles.</p>
+    </div>
+    <div class="footer-center">
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+    <div class="footer-right">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-youtube'></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 RubyRealm. All rights reserved.</p>
+  </div>
 </footer>
+
+<!-- Boxicons CDN (for icons) -->
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+<!-- Include footer script -->
+<script src="JS/Footer.js"></script>
 
 <script src="JS/main.js"></script>
     </body>

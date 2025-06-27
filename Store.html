@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>                                                                                  
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -11,38 +11,43 @@
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"/>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="CSS/Navbarstyle.css">
-  <link rel="stylesheet" href="CSS/StoreMenu.css">
-  <link rel="stylesheet" href="CSS/Cart.css">
+  <link rel="stylesheet" href="CSS/Common/Navbarstyle.css">
+  <link rel="stylesheet" href="CSS/Store/StoreMenu.css">
+    <link rel="stylesheet" href="CSS/Common/Footer.css" />
 </head>
 <body>
 
-  <!-- ✅ Navbar -->
-  <header>
-    <a href="index.html" class="logo">
-      <img src="Images/RubyRealms.png" alt="RubyRealm Logo">
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="About.html">About</a></li>
-      <li><a href="Store.html" class="active">Store</a></li>
-      <li><a href="Contact.html">Contact</a></li>
-    </ul>
-    <div class="header-right">
-      <div class="bx bx-menu" id="menu-icon"></div>
-      <a href="#"><button class="btn">Log In</button></a>
-    </div>
-  </header>
+   <header>
+  <!-- Left: Logo -->
+  <a href="index.html" class="logo">
+    <img src="Images/Logo-removebg-preview.png" alt="RubyRealm Logo">
+    <div class="logo-text"><p>RubyRealms</p></div>
+  </a>
+
+  <!-- Dropdown Menu -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Store.html">Store</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+
+    <!-- Right: Menu icon and Login -->
+  <div class="header-right">
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <a href="#"><button class="btn">Log In</button></a>
+  </div>
+</header>
 
   <h1 class="store-title">Explore Our Products</h1>
 
   <!-- ✅ Product Section -->
   <section class="store-section">
     <div class="store-Category">
-    <button class="collapse-btn">DIY Kits</button>
+    <button class="collapse-btn" id="DIY-Kits">DIY Kits</button>
     <div class="product-panel">
       <div class="product-card">
-        <img src="images/canvas.jpg" alt="Canvas Set">
+        <img src="Images/Image of an Mini Canvas Set.jpg" alt="Canvas Set">
         <h4 class="product-name">Mini Canvas Set</h4>
         <p class="product-price">₹499</p>
         <div class="product-control">
@@ -50,7 +55,7 @@
         </div>
       </div>
       <div class="product-card">
-        <img src="images/mandala.jpg" alt="Mandala Kit">
+        <img src="Images/image of mandala starter kit.jpg" alt="Mandala Kit">
         <h4 class="product-name">Mandala Starter Kit</h4>
         <p class="product-price">₹899</p>
         <div class="product-control">
@@ -58,7 +63,7 @@
         </div>
       </div>
       <div class="product-card">
-        <img src="images/jewelry.jpg" alt="Jewelry Box">
+        <img src="Images/Jwelery DIY box.jpg" alt="Jewelry Box">
         <h4 class="product-name">Jewelry DIY Box</h4>
         <p class="product-price">₹799</p>
         <div class="product-control">
@@ -69,10 +74,10 @@
     </div>
 
     <div class="store-Category">
-    <button class="collapse-btn">Accessories</button>
+    <button class="collapse-btn" id="Accessories">Accessories</button>
     <div class="product-panel">
       <div class="product-card">
-        <img src="images/bracelet.jpg" alt="Bracelet">
+        <img src="Images/Image of Charm Bracelet.jpg" alt="Bracelet">
         <h4 class="product-name">Charm Bracelet</h4>
         <p class="product-price">₹299</p>
         <div class="product-control">
@@ -80,7 +85,7 @@
         </div>
       </div>
       <div class="product-card">
-        <img src="images/keychain.jpg" alt="Keychain">
+        <img src="Images/Image of Keychain.jpg" alt="Keychain">
         <h4 class="product-name">Keychain</h4>
         <p class="product-price">₹149</p>
         <div class="product-control">
@@ -88,7 +93,7 @@
         </div>
       </div>
       <div class="product-card">
-        <img src="images/necklace.jpg" alt="Necklace">
+        <img src="Images/image of a beaded necklace.jpg" alt="Necklace">
         <h4 class="product-name">Beaded Necklace</h4>
         <p class="product-price">₹399</p>
         <div class="product-control">
@@ -97,25 +102,85 @@
       </div>
     </div>
     </div>
+
+        <div class="store-Category">
+    <button class="collapse-btn" id="Stationary">Stationary</button>
+    <div class="product-panel">
+      <div class="product-card">
+        <img src="Images/image of a caligraphy penset.jpg" alt="Caligraphy pen set">
+        <h4 class="product-name">Caligarphy Pen Set</h4>
+        <p class="product-price">₹299</p>
+        <div class="product-control">
+          <button class="add-cart" data-product="Caligraphy Pen Set">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="Images/image of alcohol markers.jpg" alt="Alchohol Markers">
+        <h4 class="product-name">Alcohol Markers</h4>
+        <p class="product-price">₹149</p>
+        <div class="product-control">
+          <button class="add-cart" data-product="Alchohol  Markers">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="Images/Image of Acrylic markers.jpg" alt="Acrylic Markers">
+        <h4 class="product-name">Acrylic Markers</h4>
+        <p class="product-price">₹399</p>
+        <div class="product-control">
+          <button class="add-cart" data-product="Acrylic Markers">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    </div>
   </section>
 
-    <!-- Cart icon -->
+<!-- Floating Cart Icon -->
 <div id="cartSidebarBtn" class="floating-cart">
   <i class='bx bx-cart'></i>
   <span id="cart-count">0</span>
 </div>
 
-  <!-- Sidebar -->
-  <div id="cartSidebar" class="cart-sidebar">
-    <button id="closeSidebar" class="close-btn">&times;</button>
-    <h3>Your Cart</h3>
-    <ul id="cartItems"></ul>
-    <div class="cart-total">Total: ₹<span id="cartTotal">0</span></div>
-    <button id="checkoutBtn" class="checkout-btn">Checkout →</button>
-  </div>
-  <div id="cartOverlay" class="cart-overlay"></div>
+<!-- Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar">
+  <button id="closeSidebar" class="close-btn">&times;</button>
+  <h3>Your Cart</h3>
+  <ul id="cartItems"></ul>
+  <div class="cart-total">Total: ₹<span id="cartTotal">0</span></div>
+<a href="Cart.html" class="checkout-btn" id="checkoutBtn">Checkout →</a>
+</div>
 
-  <script src="JS/Cart.js" defer></script>
+<!-- Overlay -->
+<div id="cartOverlay" class="cart-overlay"></div>
+
+  <!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>RubyRealm</h2>
+      <p>Crafting unique experiences for modern lifestyles.</p>
+    </div>
+    <div class="footer-center">
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+    <div class="footer-right">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-youtube'></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 RubyRealm. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Boxicons CDN (for icons) -->
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+<!-- Include footer script -->
+<script src="JS/Footer.js"></script>
+
   <script src="JS/StoreMenu.js" defer></script>
 </body>
 </html>

@@ -9,19 +9,21 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 80px 8%;
-  background: linear-gradient(135deg, #ffeaea, #beeafc);
+  background: linear-gradient(135deg, #f5cdcd, #beeafc);
   animation: fadeIn 0.8s ease;
   height: 100%;
 }
 
 /* Image area */
 .about-img {
+  border-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
   flex: 1 1 400px;
   max-width: 500px;
   animation: floatImage 4s ease-in-out infinite alternate;
+  background: linear-gradient(67deg, #fa7272a8, #6fd1f79d);
 }
 
 .about-img img {

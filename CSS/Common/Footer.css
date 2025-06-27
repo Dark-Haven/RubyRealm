@@ -1,0 +1,73 @@
+/* Footer Styles */
+.site-footer {
+  background: #1a1a1a;
+  color: #f0f0f0;
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-in-out;
+}
+.site-footer.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-left h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ff4e76;
+}
+.footer-left p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.footer-center a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 6px 0;
+  transition: color 0.3s ease;
+}
+.footer-center a:hover {
+  color: #ff4e76;
+}
+
+.footer-right a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #ccc;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-right a:hover {
+  color: #ff4e76;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #888;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}

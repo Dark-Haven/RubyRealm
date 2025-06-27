@@ -18,17 +18,32 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #fa656cea;
+  background-color: #fa656c;
   transition: all 0.5s ease-in-out;
   gap: 50px;
   border-radius: 5px;
+  max-height: 79px;
 }
 
-/* Left Logo */
-.logo img {
+ .logo img {
+  margin-top: 20px;
+  max-width: 50px;
+  max-height: 60px;
   width: 150px;
   height: auto;
   margin-right: auto;
+}
+.logo-text {
+  display: inline-block;
+  vertical-align: middle;
+  align-items: center;
+  justify-self: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  color: rgb(138, 21, 21);
+  font-weight: bold;
+  margin-left: 10px;
+  padding-bottom: 30px;
 }
 
 /* Right Container */

@@ -1,13 +1,25 @@
 /* Carousel container */
+.carousel-title {
+  text-align: center;
+  font-size: 3.5rem;
+  color: #f3131f;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.carousel-subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #f3131f;
+  margin-bottom: 30px;
+}
 .carousel-section {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
+  width: fit-content;
+  padding: 70px;
+  margin-top: -6%;
   box-sizing: border-box;
   border-radius: 10px;
-  gap: 20px;
   height: fit-content;
 }
 
@@ -16,9 +28,10 @@
   position: relative;
   width: 80%;
   height: fit-content;
-  background-color: #e5a2a2;
+  background: #fda0a875; /* Semi-transparent background */
   overflow: hidden;
   border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Slide container (flex row of images) */
