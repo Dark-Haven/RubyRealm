@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", () => {
       btn.classList.add("active");
       const panel = btn.nextElementSibling;
       panel.classList.add("open");
-      panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.maxHeight = (panel.scrollHeight + 30) + "px";
       setTimeout(() => {
         btn.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 100);

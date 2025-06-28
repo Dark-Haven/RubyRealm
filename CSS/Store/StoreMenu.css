@@ -70,7 +70,7 @@
 
 .product-panel.open {
   padding: 20px;
-  max-height: 1000px;
+  max-height: 5000px;
   background: #fd1d2993;
   border-top: 2px solid #eee;
 }

@@ -1,6 +1,6 @@
 body {
   font-family: 'Outfit', sans-serif;
-  background: #e5a2a265;
+  background: #e5a2a236;
   color: #333;
 }
 
@@ -32,6 +32,7 @@ label {
 input, textarea {
   padding: 10px;
   border: 1px solid #ddd;
+  background: #c7c7c741;
   border-radius: 6px;
   font-size: 1rem;
 }
@@ -130,7 +131,7 @@ input, textarea {
 .info-box a,
 .info-box li {
   font-size: 1rem;
-  color: #ff7d7d;
+  color: #719aa5c4;
   margin: 6px 0;
   line-height: 1.4;
   text-decoration: none;
