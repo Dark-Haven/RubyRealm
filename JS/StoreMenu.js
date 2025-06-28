@@ -11,6 +11,16 @@ const cartItemsContainer = document.getElementById("cartItems");
 const cartCount = document.getElementById("cart-count");
 const cartTotal = document.getElementById("cartTotal");
 const checkoutBtn = document.getElementById("checkoutBtn");
+checkoutBtn.addEventListener("click", function (e) {
+  e.preventDefault(); // Stop the immediate page load
+  toggleCart(false);  // Close the drawer
+
+  // Wait for animation, then redirect
+  setTimeout(() => {
+    window.location.href = this.href;
+  }, 350); // match your .cart-sidebar transition time
+});
+
 
 // ==========================
 // Accordion (collapsible categories)
@@ -215,3 +225,41 @@ function animateCartIcon() {
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+// ==========================
+// Open Description
+// ==========================
+  document.addEventListener("DOMContentLoaded", function () {
+    const readMoreLinks = document.querySelectorAll(".read-more-link");
+
+    readMoreLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const fullText = this.previousElementSibling;
+        const shortText = fullText.previousElementSibling;
+
+        const expanded = fullText.style.display === "inline";
+
+        if (!expanded) {
+          fullText.style.display = "inline";
+          shortText.style.display = "none";
+          this.textContent = "Read less";
+          this.closest('.product-card').classList.add("expanded");
+        } else {
+          fullText.style.display = "none";
+          shortText.style.display = "inline";
+          this.textContent = "Read more";
+          this.closest('.product-card').classList.remove("expanded");
+        }
+      });
+    });
+  });
+
+  checkoutBtn.addEventListener("click", (e) => {
+  e.preventDefault(); // Prevent default navigation
+  toggleCart(false);  // Close cart
+  setTimeout(() => {
+    window.location.href = "Cart.html"; // Navigate after animation
+  }, 300); // Adjust if needed to match your CSS transition
+});
+

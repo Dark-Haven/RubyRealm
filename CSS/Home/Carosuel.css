@@ -5,12 +5,16 @@
   color: #f3131f;
   margin-bottom: 10px;
   margin-top: 20px;
+  text-shadow: 2px 5px 8px rgba(0, 255, 242, 0.5);;
 }
 .carousel-subtitle {
   text-align: center;
   font-size: 1.5rem;
   color: #f3131f;
   margin-bottom: 30px;
+  font-weight: 900;
+  text-decoration: wavy;
+  text-shadow: 2px 5px 8px rgba(0, 140, 255, 0.5);;
 }
 .carousel-section {
   display: flex;
