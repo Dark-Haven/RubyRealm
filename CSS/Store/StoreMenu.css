@@ -18,6 +18,11 @@ body {
 /* =======================
    Collapsible Accordion
 ======================= */
+.collapse-btn i {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 .store-Category {
   margin: 0 auto;
   max-width: 1200px;
@@ -377,6 +382,30 @@ body {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* ===============================
+   Animated SVG Icons in Categories
+=============================== */
+.category-icon {
+  font-size: 22px;
+  margin-right: 10px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.collapse-btn:hover .category-icon,
+.collapse-btn.active .category-icon {
+  transform: scale(1.2) rotate(-5deg);
+  animation: iconPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    text-shadow: 0 0 0 rgba(230, 57, 70, 0);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
   }
 }
 
